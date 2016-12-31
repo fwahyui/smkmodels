@@ -23,10 +23,10 @@
 				<li><a href="?page=ukk"><i class="icon-angle-right"></i> UKK</a></li>
 				<li><a href="?page=prakerin"><i class="icon-angle-right"></i> PRAKERIN</a></li>
 				<li><a href="?page=buku"><i class="icon-angle-right"></i> BUKU</a></li>
-                                <li><a href="?page=raportprint"><i class="icon-angle-right"></i> DAFTAR ULANG</a></li>
-                                <li><a href="?page=raportprint"><i class="icon-angle-right"></i> SERAGAM</a></li>
-                                <li><a href="?page=raportprint"><i class="icon-angle-right"></i> INFAQ</a></li>
-                                <li><a href="?page=raportprint"><i class="icon-angle-right"></i> UNAS</a></li>
+                                <li><a href="?page=du"><i class="icon-angle-right"></i> DAFTAR ULANG</a></li>
+                                <li><a href="?page=seragam"><i class="icon-angle-right"></i> SERAGAM</a></li>
+                                <li><a href="?page=infaq"><i class="icon-angle-right"></i> INFAQ</a></li>
+                                <li><a href="?page=unas"><i class="icon-angle-right"></i> UNAS</a></li>
 			</ul>
 		</li>
 		<li class="accordion-group ">
@@ -34,7 +34,7 @@
 				<i class="icon-tasks icon-large"></i> Pembayaran
 			</a>
 			<ul class="collapse " id="inputnilai">
-				<li><a href="?page=inputnilai"><i class="icon-angle-right"></i> SPP</a></li>
+				<li><a href="?page=bayar/spp"><i class="icon-angle-right"></i> SPP</a></li>
 				<li><a href="?page=nilai"><i class="icon-angle-right"></i> UTS</a></li>
                                 <li><a href="?page=nilai"><i class="icon-angle-right"></i> SEMESTER</a></li>
 				<li><a href="?page=extra"><i class="icon-angle-right"></i> UKK</a></li>
