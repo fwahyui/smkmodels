@@ -43,9 +43,11 @@ CREATE TABLE `danainfaq` (
   `TahunAjaran` varchar(11) DEFAULT NULL,
   `Nominal` int(11) DEFAULT NULL,
   PRIMARY KEY (`kodedanainfaq`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 /*Data for the table `danainfaq` */
+
+insert  into `danainfaq`(`kodedanainfaq`,`Kode_Jur`,`Nama`,`Gelombang`,`TahunAjaran`,`Nominal`) values (1,2,'12345','123','2016/2017',13);
 
 /*Table structure for table `du` */
 
@@ -57,12 +59,13 @@ CREATE TABLE `du` (
   `TahunAjaran` varchar(11) DEFAULT NULL,
   `Nominal` int(11) DEFAULT NULL,
   `Rician` varchar(11) DEFAULT NULL,
+  `kode_jur` int(11) DEFAULT NULL,
   PRIMARY KEY (`kodedu`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 /*Data for the table `du` */
 
-insert  into `du`(`kodedu`,`Nama`,`TahunAjaran`,`Nominal`,`Rician`) values (1,'seragam,spp,infaq','2012',1200000,'0');
+insert  into `du`(`kodedu`,`Nama`,`TahunAjaran`,`Nominal`,`Rician`,`kode_jur`) values (1,'seragam,spp,infaq','2012',1200000,'0',NULL),(2,'1234','2016/2017',123,'123',2);
 
 /*Table structure for table `guru` */
 
@@ -173,9 +176,11 @@ CREATE TABLE `seragam` (
   `JenisKelamin` varchar(10) DEFAULT NULL,
   `Harga` int(11) DEFAULT NULL,
   PRIMARY KEY (`KodeSeragam`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 /*Data for the table `seragam` */
+
+insert  into `seragam`(`KodeSeragam`,`NamaSeragam`,`TahunAjaran`,`Kode_Jur`,`JenisKelamin`,`Harga`) values (2,'qwewqeqwe','2016/2017',2,'Perempuan',3214);
 
 /*Table structure for table `siswa` */
 
@@ -246,6 +251,23 @@ CREATE TABLE `tbuser` (
 
 insert  into `tbuser`(`Username`,`Pass`,`Hak`,`NamaUser`) values ('1','1','Wali Kelas','Ihda Falikatun Nisa'),('111','111','Siswa','Yulius Caesar'),('2','2','Guru','Sule Sutisnak'),('admin','admin','admin','Andini Setyowati');
 
+/*Table structure for table `tr_uts` */
+
+DROP TABLE IF EXISTS `tr_uts`;
+
+CREATE TABLE `tr_uts` (
+  `kodetransaksi` int(11) NOT NULL AUTO_INCREMENT,
+  `tanggal` date DEFAULT NULL,
+  `kode_siswa` int(11) DEFAULT NULL,
+  `kodeuts` int(11) DEFAULT NULL,
+  `nominaluts` int(11) DEFAULT NULL,
+  `Nominalbayar` int(11) DEFAULT NULL,
+  `sisa` int(11) DEFAULT NULL,
+  PRIMARY KEY (`kodetransaksi`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `tr_uts` */
+
 /*Table structure for table `ukk` */
 
 DROP TABLE IF EXISTS `ukk`;
@@ -257,9 +279,11 @@ CREATE TABLE `ukk` (
   `Kode_Jur` int(11) DEFAULT NULL,
   `Biaya` int(11) DEFAULT NULL,
   PRIMARY KEY (`KodeUkk`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 /*Data for the table `ukk` */
+
+insert  into `ukk`(`KodeUkk`,`NamaUkk`,`TahunAjaran`,`Kode_Jur`,`Biaya`) values (1,'eqw','2016/2017',1,324);
 
 /*Table structure for table `unas` */
 
@@ -272,9 +296,11 @@ CREATE TABLE `unas` (
   `NamaUnas` varchar(50) DEFAULT NULL,
   `Nominal` int(11) DEFAULT NULL,
   PRIMARY KEY (`KodeUnas`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 /*Data for the table `unas` */
+
+insert  into `unas`(`KodeUnas`,`TahunAjaran`,`Kode_Jur`,`NamaUnas`,`Nominal`) values (2,'2016/2017',2,'Unas 2017 ssss',50000);
 
 /*Table structure for table `uts` */
 
@@ -283,16 +309,16 @@ DROP TABLE IF EXISTS `uts`;
 CREATE TABLE `uts` (
   `KODEUTS` int(11) NOT NULL AUTO_INCREMENT,
   `NAMAUTS` varchar(20) DEFAULT NULL,
-  `TahunAjaran` int(11) DEFAULT NULL,
+  `TahunAjaran` varchar(11) DEFAULT NULL,
   `Kode_Jur` int(11) DEFAULT NULL,
   `Grade` varchar(10) DEFAULT NULL,
   `Nominal` int(11) DEFAULT NULL,
   PRIMARY KEY (`KODEUTS`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 /*Data for the table `uts` */
 
-insert  into `uts`(`KODEUTS`,`NAMAUTS`,`TahunAjaran`,`Kode_Jur`,`Grade`,`Nominal`) values (1,'GNJIL',2014,0,NULL,NULL);
+insert  into `uts`(`KODEUTS`,`NAMAUTS`,`TahunAjaran`,`Kode_Jur`,`Grade`,`Nominal`) values (1,'GNJIL','2014',0,NULL,NULL),(2,'213','2016/2017',2,'10',213);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
