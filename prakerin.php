@@ -39,8 +39,8 @@
                                                         <td><?php echo $rs[3]; ?></td>
 							<td><?php echo $rs[4]; ?></td>
 							<td>
-								<a href="?page=addkelas&act=1&id=<?php echo $rs[0]; ?>"><button class="btn edit"><i class="icon-edit"></i></button></a>
-								<a href="hapuskelas.php?id=<?php echo $rs[0]; ?>"><button class="btn btn-danger remove"><i class="icon-remove"></i></button></a>
+								<a href="?page=addprakerin&act=1&id=<?php echo $rs[0]; ?>"><button class="btn edit"><i class="icon-edit"></i></button></a>
+								<a href="hapusprakerin.php?id=<?php echo $rs[0]; ?>"><button class="btn btn-danger remove"><i class="icon-remove"></i></button></a>
 							</td>
 						</tr>
 					<?php
@@ -48,8 +48,8 @@
 					?>
 					</tbody>
 				</table>
-				<a href="?page=addkelas&act=0">
-					<input type="submit" value="Input Kelas Baru" class="btn btn-primary">
+				<a href="?page=addprakerin&act=0">
+					<input type="submit" value="Input Prakerin" class="btn btn-primary">
 				</a>
 			</div>
 		</div>

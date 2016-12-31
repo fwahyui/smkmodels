@@ -22,7 +22,7 @@
                                 <li><a href="?page=semester"><i class="icon-angle-right"></i> SEMESTER</a></li>
 				<li><a href="?page=ukk"><i class="icon-angle-right"></i> UKK</a></li>
 				<li><a href="?page=prakerin"><i class="icon-angle-right"></i> PRAKERIN</a></li>
-				<li><a href="?page=raportprint"><i class="icon-angle-right"></i> BUKU</a></li>
+				<li><a href="?page=buku"><i class="icon-angle-right"></i> BUKU</a></li>
                                 <li><a href="?page=raportprint"><i class="icon-angle-right"></i> DAFTAR ULANG</a></li>
                                 <li><a href="?page=raportprint"><i class="icon-angle-right"></i> SERAGAM</a></li>
                                 <li><a href="?page=raportprint"><i class="icon-angle-right"></i> INFAQ</a></li>
