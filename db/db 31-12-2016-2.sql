@@ -251,6 +251,172 @@ CREATE TABLE `tbuser` (
 
 insert  into `tbuser`(`Username`,`Pass`,`Hak`,`NamaUser`) values ('1','1','Wali Kelas','Ihda Falikatun Nisa'),('111','111','Siswa','Yulius Caesar'),('2','2','Guru','Sule Sutisnak'),('admin','admin','admin','Andini Setyowati');
 
+/*Table structure for table `tr_buku` */
+
+DROP TABLE IF EXISTS `tr_buku`;
+
+CREATE TABLE `tr_buku` (
+  `kodetransaksi` int(11) NOT NULL AUTO_INCREMENT,
+  `tanggal` date DEFAULT NULL,
+  `kode_siswa` int(11) DEFAULT NULL,
+  `kodebuku` int(11) DEFAULT NULL,
+  `nominalbuku` int(11) DEFAULT NULL,
+  `nominalbayar` int(11) DEFAULT NULL,
+  `sisa` int(11) DEFAULT NULL,
+  `keterangan` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`kodetransaksi`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+/*Data for the table `tr_buku` */
+
+insert  into `tr_buku`(`kodetransaksi`,`tanggal`,`kode_siswa`,`kodebuku`,`nominalbuku`,`nominalbayar`,`sisa`,`keterangan`) values (1,'2016-12-31',2,2,232000,50000,182000,'Cicilan Pertama'),(2,'2017-01-01',2,2,182000,50000,132000,'cicilan kedua');
+
+/*Table structure for table `tr_du` */
+
+DROP TABLE IF EXISTS `tr_du`;
+
+CREATE TABLE `tr_du` (
+  `kodetransaksi` int(11) NOT NULL AUTO_INCREMENT,
+  `tanggal` date DEFAULT NULL,
+  `kode_siswa` int(11) DEFAULT NULL,
+  `kodedu` int(11) DEFAULT NULL,
+  `nominaldu` int(11) DEFAULT NULL,
+  `nominalbayar` int(11) DEFAULT NULL,
+  `sisa` int(11) DEFAULT NULL,
+  `keterangan` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`kodetransaksi`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `tr_du` */
+
+/*Table structure for table `tr_infaq` */
+
+DROP TABLE IF EXISTS `tr_infaq`;
+
+CREATE TABLE `tr_infaq` (
+  `kodetransaksi` int(11) NOT NULL AUTO_INCREMENT,
+  `tanggal` date DEFAULT NULL,
+  `kodesiswa` int(11) DEFAULT NULL,
+  `kodedanainfaq` int(11) DEFAULT NULL,
+  `nominalinfaq` int(11) DEFAULT NULL,
+  `nominalbayar` int(11) DEFAULT NULL,
+  `sisa` int(11) DEFAULT NULL,
+  `keterangan` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`kodetransaksi`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `tr_infaq` */
+
+/*Table structure for table `tr_prakerin` */
+
+DROP TABLE IF EXISTS `tr_prakerin`;
+
+CREATE TABLE `tr_prakerin` (
+  `kodetransaksi` int(11) NOT NULL AUTO_INCREMENT,
+  `tanggal` date DEFAULT NULL,
+  `kode_siswa` int(11) DEFAULT NULL,
+  `kodeprakerin` int(11) DEFAULT NULL,
+  `nominalprakerin` int(11) DEFAULT NULL,
+  `nominalbayar` int(11) DEFAULT NULL,
+  `sisa` int(11) DEFAULT NULL,
+  `keterangan` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`kodetransaksi`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `tr_prakerin` */
+
+/*Table structure for table `tr_semester` */
+
+DROP TABLE IF EXISTS `tr_semester`;
+
+CREATE TABLE `tr_semester` (
+  `kodetransaksi` int(11) NOT NULL AUTO_INCREMENT,
+  `tanggal` date DEFAULT NULL,
+  `kode_siswa` int(11) DEFAULT NULL,
+  `kodesemester` int(11) DEFAULT NULL,
+  `nominalsemester` int(11) DEFAULT NULL,
+  `nominalbayar` int(11) DEFAULT NULL,
+  `sisa` int(11) DEFAULT NULL,
+  `keterangan` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`kodetransaksi`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `tr_semester` */
+
+/*Table structure for table `tr_seragam` */
+
+DROP TABLE IF EXISTS `tr_seragam`;
+
+CREATE TABLE `tr_seragam` (
+  `kodetransaksi` int(11) NOT NULL AUTO_INCREMENT,
+  `tanggal` date DEFAULT NULL,
+  `kodesiswa` int(11) DEFAULT NULL,
+  `kodeseragam` int(11) DEFAULT NULL,
+  `nominalseragam` int(11) DEFAULT NULL,
+  `nominalbayar` int(11) DEFAULT NULL,
+  `sisa` int(11) DEFAULT NULL,
+  `keterangan` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`kodetransaksi`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `tr_seragam` */
+
+/*Table structure for table `tr_spp` */
+
+DROP TABLE IF EXISTS `tr_spp`;
+
+CREATE TABLE `tr_spp` (
+  `kodetransaksi` int(11) NOT NULL AUTO_INCREMENT,
+  `tanggal` date DEFAULT NULL,
+  `kode_siswa` int(11) DEFAULT NULL,
+  `kodespp` int(11) DEFAULT NULL,
+  `nominalspp` int(11) DEFAULT NULL,
+  `potongan` int(11) DEFAULT NULL,
+  `nominalbayar` int(11) DEFAULT NULL,
+  `bulantransaksi` varchar(20) DEFAULT NULL,
+  `keterangan` varchar(100) DEFAULT NULL,
+  `userinsert` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`kodetransaksi`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `tr_spp` */
+
+/*Table structure for table `tr_ukk` */
+
+DROP TABLE IF EXISTS `tr_ukk`;
+
+CREATE TABLE `tr_ukk` (
+  `kodetransaksi` int(11) NOT NULL AUTO_INCREMENT,
+  `tanggal` date DEFAULT NULL,
+  `kode_siswa` int(11) DEFAULT NULL,
+  `kodeukk` int(11) DEFAULT NULL,
+  `nominalukk` int(11) DEFAULT NULL,
+  `nominalbayar` int(11) DEFAULT NULL,
+  `sisa` int(11) DEFAULT NULL,
+  `keterangan` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`kodetransaksi`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `tr_ukk` */
+
+/*Table structure for table `tr_unas` */
+
+DROP TABLE IF EXISTS `tr_unas`;
+
+CREATE TABLE `tr_unas` (
+  `kodetransaksi` int(11) NOT NULL AUTO_INCREMENT,
+  `tanggal` date DEFAULT NULL,
+  `kodesiswa` int(11) DEFAULT NULL,
+  `kodeunas` int(11) DEFAULT NULL,
+  `nominalunas` int(11) DEFAULT NULL,
+  `nominalbayar` int(11) DEFAULT NULL,
+  `sisa` int(11) DEFAULT NULL,
+  `keterangan` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`kodetransaksi`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `tr_unas` */
+
 /*Table structure for table `tr_uts` */
 
 DROP TABLE IF EXISTS `tr_uts`;
@@ -263,6 +429,7 @@ CREATE TABLE `tr_uts` (
   `nominaluts` int(11) DEFAULT NULL,
   `Nominalbayar` int(11) DEFAULT NULL,
   `sisa` int(11) DEFAULT NULL,
+  `keterangan` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`kodetransaksi`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
